@@ -10,7 +10,6 @@
 body {
   font-family: 'Comic Neue';
   font-style: cursive;
-  height: 100vh;
   align-items: center;
 }
 
@@ -138,6 +137,8 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   max-width: 1200px;
   max-height: 800px;
 }
@@ -319,11 +320,6 @@ button:hover {
 }
 
 @media (max-width: 767px) {
-  .hanged {
-    width: 100%;
-    height: 100%;
-  }
-
   .word-lines {
     gap: 10px;
   }
@@ -373,11 +369,6 @@ button:hover {
 
   .advert {
     left: 6rem;
-  }
-
-  .hanged {
-    width: 100%;
-    height: 100%;
   }
 
   .word-lines {
