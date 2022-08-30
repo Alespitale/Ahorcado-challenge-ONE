@@ -11,6 +11,8 @@ body {
   font-family: 'Comic Neue';
   font-style: cursive;
   align-items: center;
+  max-width: available;
+  max-height: available;
 }
 
 h1 {
