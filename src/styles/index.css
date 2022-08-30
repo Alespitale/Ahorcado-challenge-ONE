@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&family=DynaPuff:wght@500;600;700&display=swap');
+
+:root {
+  --animate-duration: 2s;
+  --lightMode: white;
+  --darkMode: black;
+}
+
+body {
+  font-family: 'Comic Neue';
+  font-style: cursive;
+  height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'DynaPuff';
+  font-style: cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--darkMode);
+  padding: 30px;
+  margin-bottom: 12rem;
+}
+
+input {
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 150%;
+  color: #6e0a71;
+  transition: 1s;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  margin: 5rem;
+  background-color: var(--lightMode);
+  box-shadow: 0px 0px 20px -8px rgba(203, 205, 210);
+}
+
+p {
+  position: relative;
+  top: -6.5rem;
+  left: 9rem;
+  font-weight: bold;
+  font-size: 22px;
+  color: #6e0a71;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  bottom: -330px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #6e0a71;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.84);
+  color: white;
+  transform: scale(1.04);
+  transition: all 0.3s ease-in-out;
+}
+
+.lnr-moon,
+.lnr-sun {
+  display: flex;
+  position: absolute;
+  color: black;
+  font-size: 30px;
+  max-width: 40px;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.lnr-sun {
+  color: white;
+  display: none
+}
+
+.dark-mode {
+  --lightMode: #181a1b;
+  --darkMode: white;
+  background: var(--lightMode);
+  transition: 0.5s;
+}
+
+.logo {
+  width: 90px;
+  height: 35px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.advert {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: -6.3rem;
+  left: 9rem;
+}
+
+.legend {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  height: 5px;
+}
+
+.container-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+.hanged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+.base-1,
+.base-2,
+.base-3,
+.base-4,
+.head,
+.column {
+  display: flex;
+  position: relative;
+  width: 294px;
+  height: 4.5px;
+  top: 80px;
+  border-radius: 8px;
+  background: #6e0a71;
+}
+
+.base-2 {
+  width: 4.5px;
+  height: 360px;
+  top: 80px;
+  margin-right: 12rem;
+  border-radius: 0px;
+}
+
+.base-3 {
+  width: 177.5px;
+  height: 4.5px;
+  top: 125px;
+  border-radius: 0px;
+  margin-right: 1.17rem;
+}
+
+.base-4 {
+  width: 4.5px;
+  height: 48.26px;
+  right: 0.4px;
+  top: 125px;
+  border-radius: 0px;
+  margin-left: 9.7rem;
+}
+
+.head {
+  width: 61.43px;
+  height: 61.43px;
+  left: 77px;
+  top: -202px;
+  border-radius: 50%;
+  border: 4.5px solid #6e0a71;
+  background: var(--lightMode);
+  transition: 0.5s;
+}
+
+.column {
+  position: relative;
+  width: 4.39px;
+  height: 131.62px;
+  left: 77px;
+  top: -206px;
+}
+
+.legL,
+.legR,
+.armL,
+.armR {
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+  background: #6e0a71;
+  width: 4.39px;
+  height: 70.2px;
+  left: 61px;
+  top: -212px;
+  transform: rotate(30deg);
+}
+
+.legR {
+  left: 93px;
+  top: -275px;
+  transform: rotate(-30deg);
+}
+
+.armL {
+  left: 60px;
+  top: -450px;
+  transform: rotate(30deg);
+}
+
+.armR {
+  left: 94px;
+  top: -513px;
+  transform: rotate(-30deg);
+}
+
+.word-lines {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  top: -350px;
+  gap: 20px;
+}
+
+.line {
+  width: 70px;
+  height: 4px;
+  background: #6e0a71;
+  border-radius: 8px;
+}
+
+.btn-direction-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  width: 688px;
+  height: 67px;
+  top: 800px;
+}
+
+.addWord-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 24px;
+}
+
+.btn-direction-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.btn-first,
+.btn-scnd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  gap: 8px;
+  font-size: 25px;
+  width: 332px;
+  height: 67px;
+  border-radius: 20px;
+  border: 1px solid #6e0a71;
+}
+
+.btn-first {
+  background: #6e0a71c9;
+  color: white
+}
+
+.btn-scnd {
+  background: var(--lightMode);
+  color: #6e0a71
+}
+
+@media (max-width: 767px) {
+  .hanged {
+    width: 100%;
+    height: 100%;
+  }
+
+  .word-lines {
+    gap: 10px;
+  }
+
+  .line {
+    width: 45px;
+    height: 3px;
+  }
+
+  .btn-direction-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 717px;
+  }
+
+  .btn-direction-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 630px;
+  }
+}
+
+@media (max-width: 440px) {
+  input {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 5rem;
+  }
+
+  .btn-first,
+  .btn-scnd {
+    width: 15rem;
+    height: 2rem;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 2.5rem;
+  }
+
+  p {
+    left: 6rem;
+  }
+
+  .advert {
+    left: 6rem;
+  }
+
+  .hanged {
+    width: 100%;
+    height: 100%;
+  }
+
+  .word-lines {
+    gap: 10px;
+    margin-top: 5em;
+  }
+
+  .line {
+    width: 32px;
+    height: 3px;
+  }
+
+  .btn-direction-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 630px;
+  }
+
+  .btn-direction-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 630px;
+  }
+}
