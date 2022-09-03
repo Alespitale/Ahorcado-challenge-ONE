@@ -297,13 +297,13 @@ span{
 .btn-direction-1 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 24px;
-  position: absolute;
   width: 688px;
   height: 67px;
-  top: 800px;
+  position: fixed;
+  bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .addWord-container {
@@ -378,15 +378,11 @@ span{
   .btn-direction-1 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    top: 717px;
   }
 
   .btn-direction-2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    top: 630px;
   }
 }
 
@@ -442,13 +438,11 @@ span{
     display: flex;
     flex-direction: column;
     width: 100%;
-    top: 630px;
   }
 
   .btn-direction-2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    top: 630px;
   }
 }
