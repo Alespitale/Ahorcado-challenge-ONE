@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="icon" type="image/x-icon" href="./assets/icons/alura.svg"/>
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="icon" type="image/x-icon" href="./assets/icons/alura.svg" />
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./styles/index.css" />
   <title>Hanged</title>
 </head>
@@ -30,45 +30,50 @@
         <div class="base-4"></div>
         <div class="base-2"></div>
         <div class="base-1"></div>
-        <div class="head"></div>
-        <div class="column"></div>
-        <div class="legL"></div>
-        <div class="legR"></div>
-        <div class="armL"></div>
-        <div class="armR"></div>
+        <div class="head" id="part-0"></div>
+        <div class="column" id="part-1"></div>
+        <div class="armL" id="part-2"></div>
+        <div class="armR" id="part-3"></div>
+        <div class="legL" id="part-4"></div>
+        <div class="legR" id="part-5"></div>
       </div>
       <div class="word-lines">
-        <div class="line" id = 1 ></div>
-        <div class="line" id = 2 ></div>
-        <div class="line" id = 3 ></div>
-        <div class="line" id = 4 ></div>
-        <div class="line" id = 5 ></div>
-        <div class="line" id = 6 ></div>
-        <div class="line" id = 7 ></div>
-        <div class="line" id = 8 ></div>
+        <div class="line letter" id=line-0></div>
+        <div class="line letter" id=line-1></div>
+        <div class="line letter" id=line-2></div>
+        <div class="line letter" id=line-3></div>
+        <div class="line letter" id=line-4></div>
+        <div class="line letter" id=line-5></div>
+        <div class="line letter" id=line-6></div>
+        <div class="line letter" id=line-7></div>
       </div>
+      <div class="pressedLetters"></div>
       <div class="btn-direction-1">
-        <button class="btn-first animate__animated animate__bounceInRight" onclick="newGame()">Nuevo juego</button>
-        <button class="btn-scnd animate__animated animate__bounceInRight" onclick="desist()">Desistir</button>
+        <button class="btn-first animate__animated animate__fadeInUp" onclick="newGame()">Nuevo juego</button>
+        <button class="btn-scnd animate__animated animate__fadeInUp" id="desist" onclick="desist()">Desistir</button>
       </div>
     </section>
     <section class="addWord-container">
-      <input class="animate__animated animate__jackInTheBox" type="text" id="input-word" placeholder="Ingrese una palabra" />
+      <input class="animate__animated animate__jackInTheBox" type="text" id="input-word"
+        placeholder="Ingrese una palabra" />
       <div class="legend">
         <img class="advert" src="./assets/icons/info.svg" alt="logo" width="16" height="16">
         <p>Máx. de 8 letras</p>
       </div>
       <div class="btn-container">
         <div class="btn-direction-2">
-          <button class="btn-first animate__animated animate__bounceInLeft" onclick="saveAndStart()">Guardar y empezar</button>
-          <button class="btn-scnd animate__animated animate__bounceInLeft" onclick="cancel()">Cancelar</button>
+          <button class="btn-first animate__animated animate__fadeInUp" onclick="save()">Guardar</button>
+          <button class="btn-scnd animate__animated animate__fadeInUp" onclick="cancel()">Cancelar</button>
         </div>
       </div>
     </section>
+    <footer class="foot">
+      <span class="parg">
+        <a href=https://github.com/Alespitale target="blank" class="footer animate__animated animate__jackInTheBox">
+          Alejandro Spitale - 2022 </a>
+      </span>
+    </footer>
   </main>
-  <footer class="PiePagina">
-    <a href=https://github.com/Alespitale target="blank" class="footer animate__animated animate__jackInTheBox"> Alejandro Spitale - 2022</a>
-  </footer>
   <script src="main.js"></script>
   <script src="./helpers/useDarkMode.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

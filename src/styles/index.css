@@ -7,17 +7,19 @@
   --darkMode: black;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
-  font-family: 'Comic Neue';
-  font-style: cursive;
+  font-family: 'Comic Neue', cursive;
   align-items: center;
-  max-width: available;
-  max-height: available;
+  width: auto;
 }
 
 h1 {
-  font-family: 'DynaPuff';
-  font-style: cursive;
+  font-family: 'DynaPuff', cursive;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -49,23 +51,28 @@ p {
   color: #6e0a71;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-decoration: none;
-  bottom: -330px;
-  font-weight: bold;
-  font-size: 22px;
-  color: #6e0a71;
-}
-
 button:hover {
   background: rgba(0, 0, 0, 0.84);
   color: white;
   transform: scale(1.04);
   transition: all 0.3s ease-in-out;
+}
+
+span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: #6e0a71;
 }
 
 .lnr-moon,
@@ -118,11 +125,12 @@ button:hover {
 
 .container-all {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   max-width: 1200px;
+  max-height: 700px;
   margin: 0 auto;
 }
 
@@ -139,16 +147,16 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  max-height: 800px;
+  position: fixed;
+  top: 10px;
 }
 
 .hanged {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -70px;
   max-width: 1200px;
   max-height: 800px;
 }
@@ -178,8 +186,8 @@ button:hover {
 
 .base-3 {
   width: 177.5px;
-  height: 4.5px;
-  top: 125px;
+  height: 6px;
+  top: 128px;
   border-radius: 0px;
   margin-right: 1.17rem;
 }
@@ -194,10 +202,12 @@ button:hover {
 }
 
 .head {
+  display: none;
+  position: absolute;
   width: 61.43px;
   height: 61.43px;
-  left: 77px;
-  top: -202px;
+  left: 193px;
+  top: 179px;
   border-radius: 50%;
   border: 4.5px solid #6e0a71;
   background: var(--lightMode);
@@ -205,62 +215,83 @@ button:hover {
 }
 
 .column {
-  position: relative;
+  display: none;
+  position: absolute;
   width: 4.39px;
   height: 131.62px;
-  left: 77px;
-  top: -206px;
+  left: 222px;
+  top: 239px;
 }
 
 .legL,
 .legR,
 .armL,
 .armR {
-  display: flex;
-  position: relative;
+  display: none;
+  position: absolute;
   border-radius: 8px;
   background: #6e0a71;
   width: 4.39px;
   height: 70.2px;
-  left: 61px;
-  top: -212px;
+  left: 205px;
+  top: 362px;
   transform: rotate(30deg);
 }
 
 .legR {
-  left: 93px;
-  top: -275px;
+  left: 239px;
+  top: 363px;
   transform: rotate(-30deg);
 }
 
 .armL {
-  left: 60px;
-  top: -450px;
+  left: 203px;
+  top: 236px;
   transform: rotate(30deg);
 }
 
 .armR {
-  left: 94px;
-  top: -513px;
+  left: 240.5px;
+  top: 236px;
   transform: rotate(-30deg);
 }
 
 .word-lines {
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: fixed;
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
-  top: -350px;
+  top: 450px;
   gap: 20px;
 }
 
 .line {
+  display: none;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
   width: 70px;
   height: 4px;
   background: #6e0a71;
   border-radius: 8px;
+}
+
+.letter{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--darkMode);
+}
+
+.pressedLetters{
+  position: relative;
+  top: 12rem;
+  font-size: 28px;
+  letter-spacing: 10px;
 }
 
 .btn-direction-1 {
@@ -304,7 +335,7 @@ button:hover {
   align-items: center;
   padding: 24px;
   gap: 8px;
-  font-size: 25px;
+  font-size: 28px;
   width: 332px;
   height: 67px;
   border-radius: 20px;
@@ -324,6 +355,19 @@ button:hover {
 @media (max-width: 767px) {
   .word-lines {
     gap: 10px;
+    top: 400px;
+  }
+
+  p{
+    left: 6rem;
+  }
+  
+  .advert {
+    left: 6rem;
+  }
+  
+  .pressedLetters{
+    top: 9rem;
   }
 
   .line {
@@ -349,8 +393,31 @@ button:hover {
 @media (max-width: 440px) {
   input {
     font-size: 1.5rem;
-    font-weight: 900;
     margin: 5rem;
+  }
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 2.5rem;
+  }
+
+  p{
+    left: 3rem;
+  }
+  
+  .advert {
+    left: 3rem;
+  }
+
+  .pressedLetters{
+    top: 6.5rem;
+  }
+  .addWord-container{
+    max-width: 400px;
+  }
+
+  .letter {
+    font-size: 2rem;
   }
 
   .btn-first,
@@ -360,22 +427,10 @@ button:hover {
     font-size: 1.4rem;
   }
 
-  h1 {
-    margin-left: 1rem;
-    font-size: 2.5rem;
-  }
-
-  p {
-    left: 6rem;
-  }
-
-  .advert {
-    left: 6rem;
-  }
-
   .word-lines {
     gap: 10px;
     margin-top: 5em;
+    top: 450px;
   }
 
   .line {
