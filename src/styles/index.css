@@ -288,12 +288,11 @@ span{
 
 .pressedLetters{
   position: relative;
-  top: 12rem;
-  font-size: 20px;
+  top: 7rem;
+  font-size: 28px;
   letter-spacing: 10px;
   width: 200px;
   height: 40px;
-  margin-top: 25px;
   border:none;
   text-align: center;
 }
