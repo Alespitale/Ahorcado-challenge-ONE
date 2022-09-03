@@ -405,7 +405,7 @@ span{
     height: 100px;
   }
   .base-2{
-    height: 280px;
+    height: 310px;
   }
   .legL,
   .legR{
@@ -416,7 +416,7 @@ span{
   }
 
   .pressedLetters{
-    top: 5rem;
+    top: 4rem;
   }
   .addWord-container{
     max-width: 400px;
@@ -436,7 +436,7 @@ span{
   .word-lines {
     gap: 10px;
     margin-top: 5em;
-    top: 350px;
+    top: 360px;
   }
 
   .line {
