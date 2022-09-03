@@ -1,6 +1,7 @@
 const words = ["alegre", "correr", "generar", "estirar", "mudar", "gritar", "cantar", "atlas", "tierra", "mar", "cielo"];
 
 const startGame = () => {
+  document.querySelector('.pressedLetters').value = "";
   let randomWord = words[Math.floor(Math.random() * words.length)];
   let pressed = [];
   let error = 0;
@@ -33,7 +34,6 @@ const handleGame = (word, pressed, error, count, readKey) => {
               }
             }
           } else {
-            document.querySelector('.pressedLetters').innerHTML += keyValue;
             document.getElementById(`part-${error}`).style.display = 'flex';
             error++;
           }
@@ -104,7 +104,7 @@ const cancel = () => {
 }
 
 const cleanScreen = () => {
-  document.querySelector('.pressedLetters').innerHTML = '';
+  document.querySelector('.pressedLetters').value = "";
   for (let i = 0; i < 7; i++) {
     if (document.getElementById(`line-${i}`).style.display = 'flex') 
       document.getElementById(`line-${i}`).innerHTML = '';

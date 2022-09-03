@@ -28,7 +28,7 @@ h1 {
   margin-bottom: 12rem;
 }
 
-input {
+.inputWord {
   font-weight: 400;
   font-size: 33px;
   line-height: 150%;
@@ -54,7 +54,6 @@ p {
 button:hover {
   background: rgba(0, 0, 0, 0.84);
   color: white;
-  transform: scale(1.04);
   transition: all 0.3s ease-in-out;
 }
 
@@ -290,8 +289,13 @@ span{
 .pressedLetters{
   position: relative;
   top: 12rem;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 10px;
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  border:none;
+  text-align: center;
 }
 
 .btn-direction-1 {
@@ -387,7 +391,7 @@ span{
 }
 
 @media (max-width: 375px) {
-  input {
+  .inputWord {
     font-size: 1.5rem;
     margin: 5rem;
   }
