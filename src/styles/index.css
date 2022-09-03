@@ -293,7 +293,7 @@ span{
   letter-spacing: 10px;
   width: 200px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 25px;
   border:none;
   text-align: center;
 }
@@ -305,7 +305,7 @@ span{
   gap: 10px;
   width: 688px;
   height: 67px;
-  margin-top: 60%;
+  margin-top: 30%;
 }
 
 .addWord-container {
@@ -450,6 +450,7 @@ span{
     display: flex;
     flex-direction: column;
     width: 100%;
+    
   }
 
   .btn-direction-2 {

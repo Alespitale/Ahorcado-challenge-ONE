@@ -17,6 +17,7 @@ const startGame = () => {
 }
 
 const handleGame = (word, pressed, error, count, readKey) => {
+  documentTouch
   document.addEventListener("keydown", (event) => {
     if (readKey){
       let input = document.querySelector('.pressedLetters').value;
