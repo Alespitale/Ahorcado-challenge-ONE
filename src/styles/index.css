@@ -261,7 +261,7 @@ span{
   position: fixed;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   top: 450px;
   gap: 20px;
 }
@@ -417,7 +417,7 @@ span{
   }
 
   .pressedLetters{
-    top: 4rem;
+    top: 5rem;
   }
   .addWord-container{
     max-width: 400px;
