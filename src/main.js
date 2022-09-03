@@ -58,6 +58,10 @@ const handleGame = (word, pressed, error, count, readKey) => {
   }, false);
 }
 
+const openKeyboard = () => {
+  prompt();
+}
+
 const newGame = () => {
   cleanScreen();
   startGame();
