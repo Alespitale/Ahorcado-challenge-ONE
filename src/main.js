@@ -1,6 +1,7 @@
 const words = ["alegre", "correr", "generar", "estirar", "mudar", "gritar", "cantar", "atlas", "tierra", "mar", "cielo"];
 
 const startGame = () => {
+  document.querySelector(".game-container").focus();
   let randomWord = words[Math.floor(Math.random() * words.length)];
   let pressed = [];
   let error = 0;
