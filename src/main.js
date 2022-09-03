@@ -19,16 +19,18 @@ const startGame = () => {
 const handleGame = (word, pressed, error, count, readKey) => {
   document.addEventListener("keydown", (event) => {
     if (readKey){
+      let input = document.querySelector('.pressedLetters').value;
       let keyValue = event.key;
       let capitalLetters = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
       let lowerLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
       if (capitalLetters.includes(keyValue)) keyValue = keyValue.toLowerCase();
-      if (lowerLetters.includes(keyValue)) {
-        if(!pressed.includes(keyValue)) {
+      if (capitalLetters.includes(input)) input = input.toLowerCase();
+      if (lowerLetters.includes(keyValue) || lowerLetters.includes(input)) {
+        if(!pressed.includes(keyValue) || !pressed.includes(input)) {
           pressed.push(keyValue);
-          if (word.includes(keyValue)) {
+          if (word.includes(keyValue) || word.includes(input)) {
             for (let i = 0; i < word.length; i++) {
-              if (word[i] === keyValue) {
+              if (word[i] === keyValue || word[i] === input) {
                 document.getElementById(`line-${i}`).innerHTML = keyValue;
                 count++;
               }
