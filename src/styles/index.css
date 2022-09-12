@@ -510,7 +510,7 @@ span{
   .btn-first,
   .btn-scnd {
     padding: 18px;
-    width: 10rem;
+    width: 11rem;
     height: 10px;
     font-size: 18px;
   }
@@ -530,7 +530,7 @@ span{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 52%;
+    margin-top: 40%;
     width: 100%;
   }
 
