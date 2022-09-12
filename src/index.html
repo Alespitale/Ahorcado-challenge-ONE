@@ -48,6 +48,41 @@
         <div class="line letter" id=line-7></div>
       </div>
       <div class="pressedLetters"></div>
+      <div class="letter-btn-container">
+        <div class="letterRowOne">
+          <button class="letter-btn" onclick="handleLetterBtn('q')">q</button>
+          <button class="letter-btn" onclick="handleLetterBtn('w')">w</button>
+          <button class="letter-btn" onclick="handleLetterBtn('e')">e</button>
+          <button class="letter-btn" onclick="handleLetterBtn('r')">r</button>
+          <button class="letter-btn" onclick="handleLetterBtn('t')">t</button>
+          <button class="letter-btn" onclick="handleLetterBtn('y')">y</button>
+          <button class="letter-btn" onclick="handleLetterBtn('u')">u</button>
+          <button class="letter-btn" onclick="handleLetterBtn('i')">i</button>
+          <button class="letter-btn" onclick="handleLetterBtn('o')">o</button>
+          <button class="letter-btn" onclick="handleLetterBtn('p')">p</button>
+        </div>
+        <div class="letterRowTwo">
+          <button class="letter-btn" onclick="handleLetterBtn('a')">a</button>
+          <button class="letter-btn" onclick="handleLetterBtn('s')">s</button>
+          <button class="letter-btn" onclick="handleLetterBtn('d')">d</button>
+          <button class="letter-btn" onclick="handleLetterBtn('f')">f</button>
+          <button class="letter-btn" onclick="handleLetterBtn('g')">g</button>
+          <button class="letter-btn" onclick="handleLetterBtn('h')">h</button>
+          <button class="letter-btn" onclick="handleLetterBtn('j')">j</button>
+          <button class="letter-btn" onclick="handleLetterBtn('k')">k</button>
+          <button class="letter-btn" onclick="handleLetterBtn('l')">l</button>
+          <button class="letter-btn" onclick="handleLetterBtn('ñ')">ñ</button>
+        </div>
+        <div class="letterRowThree">
+          <button class="letter-btn" onclick="handleLetterBtn('z')">z</button>
+          <button class="letter-btn" onclick="handleLetterBtn('x')">x</button>
+          <button class="letter-btn" onclick="handleLetterBtn('c')">c</button>
+          <button class="letter-btn" onclick="handleLetterBtn('v')">v</button>
+          <button class="letter-btn" onclick="handleLetterBtn('b')">b</button>
+          <button class="letter-btn" onclick="handleLetterBtn('n')">n</button>
+          <button class="letter-btn" onclick="handleLetterBtn('m')">m</button>
+        </div>
+      </div>
       <div class="btn-direction-1">
         <button class="btn-first animate__animated animate__fadeInUp" onclick="newGame()">Nuevo juego</button>
         <button class="btn-scnd animate__animated animate__fadeInUp" id="desist" onclick="desist()">Desistir</button>
@@ -76,6 +111,8 @@
   </main>
   <script src="main.js"></script>
   <script src="./helpers/useDarkMode.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
