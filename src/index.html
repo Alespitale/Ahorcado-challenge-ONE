@@ -21,8 +21,8 @@
   <main class="container-all">
     <div class="first-screen">
       <h1 class="animate__animated animate__hinge animate__delay-2s animate__infinite infinite">El Ahorcado</h1>
-      <button class="btn-first animate__animated animate__jackInTheBox" onclick="startGame()">Iniciar juego</button>
-      <button class="btn-scnd animate__animated animate__jackInTheBox" onclick="addWord()">Agregar palabra</button>
+      <button class="btn-first animate__animated animate__jackInTheBox" id="startGame" onclick="startGame()">Iniciar juego</button>
+      <button class="btn-scnd animate__animated animate__jackInTheBox" id="addWord" onclick="addWord()">Agregar palabra</button>
     </div>
     <section class="game-container">
       <div class="hanged">
@@ -46,6 +46,8 @@
         <div class="line letter" id=line-5></div>
         <div class="line letter" id=line-6></div>
         <div class="line letter" id=line-7></div>
+        <div class="line letter" id=line-8></div>
+        <div class="line letter" id=line-9></div>
       </div>
       <div class="pressedLetters"></div>
       <div class="letter-btn-container">
@@ -84,8 +86,8 @@
         </div>
       </div>
       <div class="btn-direction-1">
-        <button class="btn-first animate__animated animate__fadeInUp" onclick="newGame()">Nuevo juego</button>
-        <button class="btn-scnd animate__animated animate__fadeInUp" id="desist" onclick="desist()">Desistir</button>
+        <button class="btn-ng animate__animated animate__fadeInUp" onclick="newGame()">Nuevo juego</button>
+        <button class="btn-des animate__animated animate__fadeInUp" id="desist" onclick="desist()">Desistir</button>
       </div>
     </section>
     <section class="addWord-container">
@@ -93,7 +95,7 @@
         placeholder="Ingrese una palabra" />
       <div class="legend">
         <img class="advert" src="./assets/icons/info.svg" alt="logo" width="16" height="16">
-        <p>Máx. de 8 letras</p>
+        <p>Máx. de 10 letras</p>
       </div>
       <div class="btn-container">
         <div class="btn-direction-2">
@@ -105,15 +107,16 @@
     <footer class="foot">
       <span class="parg">
         <a href=https://github.com/Alespitale target="blank" class="footer animate__animated animate__jackInTheBox">
-          Alejandro Spitale - 2022 </a>
+          @AleSpitale
+        </a>
       </span>
     </footer>
   </main>
-  <script src="main.js"></script>
-  <script src="./helpers/useDarkMode.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="main.js"></script>
+  <script src="./helpers/useDarkMode.js"></script>
 </body>
 
 </html>

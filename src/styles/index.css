@@ -148,7 +148,7 @@ span{
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 10px;
+  bottom: 350px;
 }
 
 .hanged {
@@ -262,8 +262,7 @@ span{
   position: fixed;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  top: 450px;
+  bottom: 130px;
   gap: 20px;
 }
 
@@ -280,34 +279,37 @@ span{
 .letter{
   position: relative;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 400;
   font-size: 45px;
   line-height: 50px;
-  text-align: center;
   color: var(--darkMode);
 }
 
 .pressedLetters{
-  position: relative;
-  top: 7rem;
-  font-size: 36px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  color: var(--darkMode);
+  position: fixed;
+  bottom: 80px;
   width: 450px;
   height: 40px;
-  border:none;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
+  color: var(--darkMode);
+  border:none;
 }
 
 .btn-direction-1 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 688px;
-  height: 67px;
-  margin-top: 52%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 15px;
+  gap: 20px;
+  width: 100%;
+  height: 40px;
 }
 
 .addWord-container {
@@ -317,15 +319,6 @@ span{
   gap: 30px;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 50px;
-  gap: 24px;
-}
-
 .btn-direction-2 {
   display: flex;
   flex-direction: row;
@@ -333,20 +326,23 @@ span{
 }
 
 .btn-first,
-.btn-scnd {
+.btn-scnd,
+.btn-ng,
+.btn-des {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
   gap: 8px;
   font-size: 30px;
-  width: 336px;
-  height: 67px;
+  width: 260px;
+  height: 50px;
   border-radius: 20px;
   border: 1px solid #6e0a71;
 }
 
-.btn-first {
+.btn-first,
+.btn-ng {
   background: #6e0a71c9;
   color: white
 }
@@ -357,7 +353,13 @@ span{
 }
 
 .letter-btn-container{
- display: none;   
+ display: none;
+}
+
+@media (max-height: 740px) {
+  .game-container {
+    bottom: 240px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -367,7 +369,7 @@ span{
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 650px;
+    bottom: 100px;
     gap: 10px;
   }
 
@@ -376,26 +378,36 @@ span{
   .letterRowThree{
     display: flex;
     justify-content: center;
-    max-width: 540px;
+    max-width: 600px;
     gap: 10px;
+  }
+
+  .game-container {
+    bottom: 420px;
   }
 
   .letter-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
     width: 50px;
     height: 50px;
     padding: 8px;
     border-radius: 10px;
     border: 1px solid #6e0a71;
     color: #181a1b;
+    font-weight: bold;
     text-transform: uppercase;
   }
-
+  
   .word-lines {
     gap: 10px;
-    top: 470px;
+    bottom: 340px;
+  }
+  
+  .pressedLetters{
+    bottom: 290px;
   }
 
   p{
@@ -404,10 +416,6 @@ span{
   
   .advert {
     left: 6rem;
-  }
-  
-  .pressedLetters{
-    top: 9rem;
   }
 
   .line {
@@ -427,7 +435,6 @@ span{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 65%;
   }
 
   .btn-direction-2 {
@@ -437,29 +444,23 @@ span{
 }
 
 @media (max-width: 550px) {
-
   .letter-btn-container{
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 450px;
+    bottom: 70px;
+  }
+
+  .game-container {
+    bottom: 300px;
   }
 
   .letterRowOne,
   .letterRowTwo,
   .letterRowThree{
-    display: flex;
-    justify-content: center;
-    max-width: 340px;
     gap: 5px;
   }
 
   .letter-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     padding: 8px;
     border-radius: 10px;
     border: 1px solid #6e0a71;
@@ -495,10 +496,6 @@ span{
     left: 3rem;
   }
 
-  .pressedLetters{
-    top: 4.2rem;
-    font-size: 1.2rem;
-  }
   .addWord-container{
     max-width: 400px;
   }
@@ -507,36 +504,31 @@ span{
     font-size: 2rem;
   }
 
-  .btn-first,
-  .btn-scnd {
+  .btn-ng,
+  .btn-des {
     padding: 18px;
-    width: 10.5rem;
-    height: 10px;
-    font-size: 18px;
+    width: 160px;
+    height: 8px;
+    font-size: 20px;
   }
 
   .word-lines {
     gap: 10px;
-    margin-top: 5em;
-    top: 330px;
+    bottom: 230px;
   }
 
   .line {
-    width: 32px;
+    width: 25px;
     height: 3px;
   }
 
-  .btn-direction-1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 40%;
-    width: 100%;
+  .pressedLetters{
+    bottom: 180px;
+    font-size: 1.2rem;
   }
 
-  .btn-direction-2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  .btn-direction-1 {
+    margin: 10px;
+    gap: 10px;
   }
 }
