@@ -173,7 +173,7 @@ span{
   height: 4.5px;
   top: 80px;
   border-radius: 8px;
-  background: #6e0a71;
+  background: #e2d40f;
 }
 
 .base-2 {
@@ -217,6 +217,7 @@ span{
 .column {
   display: none;
   position: absolute;
+  background: #6e0a71;
   width: 4.39px;
   height: 131.62px;
   left: 222px;
@@ -272,7 +273,7 @@ span{
   justify-content: center;
   width: 70px;
   height: 4px;
-  background: #6e0a71;
+  background: #e2d40f;
   border-radius: 8px;
 }
 
@@ -390,7 +391,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
     width: 50px;
     height: 50px;
     padding: 8px;
@@ -459,11 +460,11 @@ span{
   }
 
   .letter-btn{
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     padding: 8px;
     border-radius: 10px;
-    border: 1px solid #6e0a71;
+    border: 1px solid var(--darkMode);
     color: #181a1b;
     text-transform: uppercase;
   }
