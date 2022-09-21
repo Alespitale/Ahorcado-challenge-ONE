@@ -214,7 +214,7 @@ const cleanScreen = () => {
 }
 
 const win = () => {
-  setTimeout(showConfetti, 400);
+  showConfetti();
   setTimeout(sfx.winMusic.play(), 400);
   showToast("success", "¡Ganaste &#128526!");
 }
@@ -226,7 +226,7 @@ const lost = (word) => {
   document.querySelector('.armL').classList.add('animate__animated', 'animate__swing');
   document.querySelector('.head').classList.add('animate__animated', 'animate__swing');
   setTimeout(sfx.lostMusic.play(), 400);
-  showToast("error", `¡Perdiste &#128546! La palabra era: ${word}`);
+  showToast("error", `¡Perdiste &#128541! La palabra era: ${word}`);
 }
 
 const isEmptyText = (text) => {
@@ -259,7 +259,7 @@ const isThereNums = (text) => {
 const showConfetti = () => {
   const jsConfetti = new JSConfetti();
   jsConfetti.addConfetti({
-    confettiNumber: 2000,
+    confettiNumber: 1000,
   });
 }
 
